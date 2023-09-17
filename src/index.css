@@ -15,6 +15,9 @@ code {
   --green-color :#6CBF84;
   --green-color-light :rgba(108, 191, 132, 0.15);
 
+  --text-color:#110E3D;
+  --text-color-light:#343434;
+
 
   --text-font: 'Inter', sans-serif;
   --font-H1: 2.5rem;

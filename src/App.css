@@ -6,3 +6,37 @@
   padding: 0.2rem 1rem;
   border-radius: 6.1875rem;
 }
+
+.subtitle {
+  color: var(--text-color);
+
+  font-size: var(--font-H2);
+  font-style: var(--font-normal);
+  font-weight: 400;
+}
+
+.paragraph {
+  color: var(--text-color-light);
+  text-align: center;
+  font-size: var(--font-H5);
+  font-style: var(--font-normal);
+  font-weight: 400;
+}
+
+.textH4{
+  color: var(--text-color-light);
+  text-align: center;
+  font-size: var(--font-H4);
+  font-style: var(--font-normal);
+  font-weight: 400;
+}
+
+.justify {
+  display: flex !important;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
