@@ -1,12 +1,17 @@
-import './App.css';
+import "./App.css";
 
-// import Footer from './Pages/components/footer/footer';
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavbarComp from "./Pages/components/navbar/navbar";
+
+import Footer from "./Pages/components/footer/footer";
+import Hero from "./Pages/components/hero/hero";
 
 function App() {
   return (
     <>
-    <Navbar/>
-    {/* <Footer/> */}
+      <NavbarComp />
+      <Hero/>
+      <Footer />
     </>
   );
 }

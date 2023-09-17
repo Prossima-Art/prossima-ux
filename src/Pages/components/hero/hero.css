@@ -1,0 +1,14 @@
+.heroComp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: auto; */
+    text-align: center;
+}
+
+
+.textinfoPainel{
+    font-size: var(--font-H4);
+    font-weight: var(--font-normal);
+}

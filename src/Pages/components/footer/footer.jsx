@@ -25,7 +25,7 @@ export default function Footer() {
   useEffect(() => (window.onresize = updateSize), []);
   const mobileSize = 780;
   return (
-    <Container fluid className="footer">
+    <Container fluid className="footer mt-5">
       <Row>
         <Col className={`text-left ${size.x <= mobileSize ? 'mobile' : ''}`} gab={3}>
           <p>Follow |</p>
