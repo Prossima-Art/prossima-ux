@@ -1,0 +1,66 @@
+.PaperComp {
+  display: flex;
+  /* padding: 1rem; */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6875rem;
+}
+
+.boxShadow {
+  border-radius: 0.3125rem;
+  background: #fff;
+
+  /* shadow */
+  box-shadow: -1px 0px 31px 0px rgba(17, 14, 61, 0.1);
+}
+
+.boxSize {
+  width: 28.3rem;
+}
+
+.adjutsment {
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.smalltext {
+  color: #7f7b7b;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.moreProjectsComp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 3.00456rem 27.625rem 3.00463rem 0rem;  */
+  align-items: center;
+  border-radius: 62.4375rem;
+  background: #FBF8FF;
+}
+
+
+
+/* Button style */
+
+.button {
+  display: flex;
+  max-width: 21.115rem;
+  padding: 0.97rem 1.5rem 0.97rem 1.5rem;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+  border-radius: 6.1875rem;
+  background: rgba(17, 14, 61, 0.06);
+  border-color: transparent;
+
+  color: #4e5079;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.63125rem;
+}

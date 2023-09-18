@@ -9,6 +9,11 @@ import {
 
 import './index.css';
 import Projects from './Pages/projects';
+import BrbComp from './Pages/components/brbProject/brbComp';
+import YupComp from './Pages/components/yupproject/yupComp';
+import WizComp from './Pages/components/wizProject/wizComp';
+import AwsComp from './Pages/components/awsproject/awsComp';
+import DonPeComp from './Pages/components/donpeProject/donPeComp';
 
 
 
@@ -22,6 +27,29 @@ const router = createBrowserRouter([
         path: "/Projects",
         element: <Projects />,
     },
+
+    {
+        path: "/ProjectBrb",
+        element: <BrbComp />,
+    },
+
+    {
+        path: "/YupComp",
+        element: <YupComp />,
+    },
+    {
+        path: "/WizComp",
+        element: <WizComp />,
+    },
+    {
+        path: "/AwsComp",
+        element: <AwsComp />,
+    },
+    {
+        path: "/DonPeComp",
+        element: <DonPeComp />,
+    },
+
     {
         path: "/*",
         element: <div>page not found, go to home:</div>,

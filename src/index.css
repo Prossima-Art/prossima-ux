@@ -3,6 +3,7 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -15,8 +16,17 @@ code {
   --green-color :#6CBF84;
   --green-color-light :rgba(108, 191, 132, 0.15);
 
+  --error-color: #F25685;
+  --error-color-light: rgba(242, 86, 133, 0.15);
+  --warnning-color: #EB8155;
+  --warnning-color-light: rgba(235, 129, 85, 0.15);
+  --info-color: #5682F2;
+  --info-color-light: rgba(86, 130, 242, 0.15); 
+
   --text-color:#110E3D;
   --text-color-light:#343434;
+
+  --purple-color: #9E5AFF;
 
 
   --text-font: 'Inter', sans-serif;

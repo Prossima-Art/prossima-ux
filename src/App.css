@@ -5,11 +5,37 @@
   background: var(--green-color-light);
   padding: 0.2rem 1rem;
   border-radius: 6.1875rem;
+  text-transform: uppercase;
+}
+
+
+.redtag {
+  color: var(--error-color);
+  background: var(--error-color-light);
+  padding: 0.2rem 1rem;
+  border-radius: 6.1875rem;
+  text-transform: uppercase;
+}
+
+.orangetag{
+  color: var(--warnning-color);
+  background: var(--warnning-color-light);
+  padding: 0.2rem 1rem;
+  border-radius: 6.1875rem;
+  text-transform: uppercase;
+
+}
+
+.bluetag{
+  color: var(--info-color);
+  background: var(--info-color-light);
+  padding: 0.2rem 1rem;
+  border-radius: 6.1875rem;
+  text-transform: uppercase;
 }
 
 .subtitle {
   color: var(--text-color);
-
   font-size: var(--font-H2);
   font-style: var(--font-normal);
   font-weight: 400;
@@ -37,6 +63,13 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+}
+
+
+.titleProjects{
+  font-size: 4rem;
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 

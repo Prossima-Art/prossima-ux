@@ -36,13 +36,15 @@ const Hero = () => {
       </Row>
 
       <Row>
-        <Col className="mx-auto mt-5" >
+        <Col className="mx-auto mt-5" sm={12}>
           <img src={Painel} className="imageSize" alt="painel" />
         </Col>
-        <p className="textinfoPainel">
+        <Col>
+        <p className="textinfoPainel" sm={12}>
           Build exceptional experiences with UI and usability design, driven by
           metrics and accurate testing.
         </p>
+        </Col>
       </Row>
     </Container>
   );

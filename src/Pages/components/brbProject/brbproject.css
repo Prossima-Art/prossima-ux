@@ -1,0 +1,31 @@
+.ImgSize {
+  width: 100vw;
+  height: auto;
+}
+
+.ButtonBack {
+  display: flex;
+  padding: 2.75rem 1.625rem;
+  width: 20rem;
+  height: 4rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6.1875rem;
+  background: #9e5aff;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.63125rem;
+  text-transform: uppercase;
+}
+
+
+.ButtonBack:hover, :after {
+  background: #611BC4;
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,22 @@
+.projectView {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 31rem;
+  height: 19rem;
+  flex-shrink: 0;
+  display: none;
+}
+
+.houveranimation:hover .projectView {
+  display: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}

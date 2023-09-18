@@ -1,4 +1,4 @@
-import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
+import { Navbar, Nav, Button } from "react-bootstrap";
 import { Logo } from "../../../logo";
 import "./navbar.css";
 
@@ -7,8 +7,11 @@ import React from "react";
 const NavbarComp = () => {
   return (
     <Navbar bg="light" expand="lg" className="mx-5">
-      <Navbar.Brand href="#">
-        <Logo />
+      <Navbar.Brand href="/">
+        <Logo style={{width: "20%", height: "20%"}}
+          className="d-inline-block align-top"
+          alt="React Bootstrap logo"
+          />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll" className="justify-content-end">

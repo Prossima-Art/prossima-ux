@@ -9,9 +9,11 @@
 
 
 .imageSize{
-  width: 52.98438rem;
-  height: 24.05756rem;
+  width: 60vw;
+  height: auto;
 }
+
+
 .textinfoPainel {
   font-size: var(--font-H4);
   font-weight: var(--font-normal);
