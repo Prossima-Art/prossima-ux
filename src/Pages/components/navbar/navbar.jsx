@@ -23,7 +23,7 @@ const NavbarComp = () => {
           <Nav.Link href="/Projects" className="mx-4">Projects</Nav.Link>
           
         </Nav>
-        <Button variant="primary">Contact</Button>
+        <Button href="https://wa.link/2064ef" className="mx-4" size="lg" variant="primary">Contact</Button>
       </Navbar.Collapse>
     </Navbar>
   );
