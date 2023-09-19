@@ -15,6 +15,13 @@ import WizComp from './Pages/components/wizProject/wizComp';
 import AwsComp from './Pages/components/awsproject/awsComp';
 import DonPeComp from './Pages/components/donpeProject/donPeComp';
 
+import TagManager from 'react-gtm-module';
+
+const tagManagerArgs = {
+    gtmId: 'GTM-WKTRFMJX'
+};
+
+TagManager.initialize(tagManagerArgs);
 
 
 

@@ -10,10 +10,12 @@ import Research, { Prototyping, Userjounery, Usertesting,  } from "./Pages/compo
 import RecentWork from "./Pages/components/recentWork/recentWork";
 import MoreProjects from "./Pages/components/moreProjects/moreProjects";
 
+
+
 function App() {
   return (
     <>
-      <NavbarComp />
+      <NavbarComp  />
       <Hero/>
       <TitleSection/>
       <Research/>
