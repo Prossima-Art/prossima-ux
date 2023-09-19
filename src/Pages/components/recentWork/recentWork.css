@@ -8,6 +8,7 @@
   height: 19rem;
   flex-shrink: 0;
   display: none;
+  
 }
 
 .houveranimation:hover .projectView {
@@ -19,4 +20,9 @@
   opacity: 0.9;
   z-index: 1;
   transition: 0.5s ease-in-out;
+  
+}
+
+.houveranimation a{
+  text-decoration: none;
 }

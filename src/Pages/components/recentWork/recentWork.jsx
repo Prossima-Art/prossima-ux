@@ -58,36 +58,37 @@ const RecentWork = () => {
             </Row>
 
             <Row  className='mt-5 houveranimation'>
-                <Col className='d-flex justify-content-between' md={12}>
+                <a href='/ProjectBrb' className='d-flex justify-content-between' md={12} >
+                
                 <h1 className='paragraph'>BRB Bank</h1>
                     <Arrow/>
                     <ProjectViewbrb/>
-                </Col>
+                </a>
             </Row>
 
             <Row  className='mt-4 houveranimation'>
-                <Col className='d-flex justify-content-between' md={12}>
+                <a href='/WizComp' className='d-flex justify-content-between' md={12}>
                 <h1 className='paragraph'>Wiz.co</h1>
                     <Arrow/>
                     <ProjectViewWiz/>
-                </Col>
+                </a>
             </Row>
 
 
             <Row  className='mt-4 houveranimation'>
-                <Col className='d-flex justify-content-between' md={12}>
+                <a href='/AwsComp' className='d-flex justify-content-between' md={12}>
                 <h1 className='paragraph'>Amazon AWS</h1>
                     <Arrow/>
                     <ProjectViewAws/>
-                </Col>
+                </a>
             </Row>
 
             <Row  className='mt-4 houveranimation'>
-                <Col className='d-flex justify-content-between' md={12}>
+                <a href='/YupComp' className='d-flex justify-content-between' md={12}>
                 <h1 className='paragraph'>Yup Chat</h1>
                     <Arrow/>
                     <ProjectViewYup/>
-                </Col>
+                </a>
             </Row>
         </Container>
     );
