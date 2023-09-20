@@ -35,7 +35,7 @@ export default function Footer() {
           <EmailIcon />
         </Col>
         <Row>
-          <Col className="logo" xs={12}>
+          <Col className="logo">
             <Logo />
             <p className="mx-0">© All Rights Reserved.</p>
           </Col>
