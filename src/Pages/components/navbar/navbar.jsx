@@ -3,6 +3,7 @@ import { Logo } from "../../../logo";
 import "./navbar.css";
 
 import React from "react";
+import { ModalContato } from "../offcanvas/Offcanvas";
 
 const NavbarComp = () => {
   return (
@@ -23,7 +24,7 @@ const NavbarComp = () => {
           <Nav.Link href="/Projects" className="mx-4">Projects</Nav.Link>
           
         </Nav>
-        <Button href="https://wa.link/2064ef" className="mx-4" size="lg" variant="primary">Contact</Button>
+        <ModalContato/>
       </Navbar.Collapse>
     </Navbar>
   );
