@@ -3,3 +3,11 @@
    
 }
 
+
+
+@media (width <= 1000px) {
+    .arrowCurve {
+      display: none;
+    }
+
+}

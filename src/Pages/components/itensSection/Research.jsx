@@ -7,7 +7,11 @@ import UserJourney from "./assets/userJourney.png";
 import Prototypingimg from "./assets/prototyping.png";
 
 const VideoPlayer = () => {
-  return <video src={Video} autoPlay loop muted width={380} />;
+  return <video src={Video} autoPlay loop muted
+  style={{
+    width: "100%",
+  }}
+  />;
 };
 
 export const ArrowCurveL = () => {
