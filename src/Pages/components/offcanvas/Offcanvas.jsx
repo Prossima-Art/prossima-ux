@@ -15,43 +15,50 @@ export function ModalContato() {
 }
 
 export function OffCanvasExample({ ...props }) {
-  
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [users, setUsers] = useState([]);
+  const [Contacts, setContacts] = useState([]);
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
-  
-  const getUsers = async () => {
-    const { data } = await axios.get(`https://prossima-be.vercel.app/contacts`);
-    setUsers(data);
+
+  const getContacts = async () => {
+    const { data } = await axios.get(`https://prossima-be.vercel.app/contacts`)
+    .then((response) => response.data)
+    .catch((error) => console.log(error));
+
+    setContacts(data);
   };
 
-  const addNewUser = async () => {
+  const addNewContacts = async () => {
     if (!Name || !Email) {
       return alert("Preencha os campos !");
     }
     const data = { Name, Email };
 
-    const { data: newUser } = await axios.post(`https://prossima-be.vercel.app/contacts`, data);
+    const { data: newContacts} = await axios.post(
+      `https://prossima-be.vercel.app/contacts`,
+      data
+    )
+    .then((response) => response.data)
+    .catch((error) => console.log(error))
+    ;
 
-    setUsers([...users, newUser]);
+    setContacts([...Contacts, newContacts]);
     setName("");
     setEmail("");
   };
 
-
   useEffect(() => {
-    getUsers();
+    getContacts();
   }, []);
 
   return (
     <>
       <Button variant="primary" className="rounded-5" onClick={handleShow}>
-        Contanct Us
+        Contact Us
       </Button>
 
       <Offcanvas
@@ -77,11 +84,8 @@ export function OffCanvasExample({ ...props }) {
             forward to hearing from you!
           </p>
 
-          <Form className="mb-5" onSubmit={addNewUser}>
-            <Form.Group
-              className="row-md-2 mx-2"
-              
-            >
+          <Form className="mb-5" onSubmit={addNewContacts}>
+            <Form.Group className="row-md-2 mx-2">
               <Form.Label for="name" column sm="4">
                 Your name
               </Form.Label>
@@ -98,10 +102,7 @@ export function OffCanvasExample({ ...props }) {
                 onChange={(e) => setName(e.target.value)}
               />
             </Form.Group>
-            <Form.Group
-              className="row-md-3 mx-2 "
-             
-            >
+            <Form.Group className="row-md-3 mx-2 ">
               <Form.Label column sm="4" for="email">
                 Email address
               </Form.Label>
@@ -116,20 +117,19 @@ export function OffCanvasExample({ ...props }) {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </Form.Group>
-          <Button
-            className="rounded-5"
-            
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100%",
-            }}
-            variant="primary"
-            type="submit"
-            // onClick={() => send2DB(Name, Email)}
-          >
-            Join The Waitlist!
-          </Button>
+            <Button
+              className="rounded-5"
+              style={{
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+              }}
+              variant="primary"
+              type="submit"
+              // onClick={() => send2DB(Name, Email)}
+            >
+              Join The Waitlist!
+            </Button>
           </Form>
         </Offcanvas.Body>
         <p class="text-secondary text-center mb-5">
