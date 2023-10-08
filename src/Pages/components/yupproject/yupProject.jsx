@@ -16,7 +16,7 @@ const Yupproject = () => {
           className=" mx-auto mt-2 d-flex flex-column justify-content-center align-items-center"
           md={12}
         >
-          <sapn className="greentag">UI/UX Design- Brazil- 2022</sapn>
+          <span className="greentag">UI/UX Design- Brazil- 2022</span>
           <h1 className="mt-4">Yup Chat</h1>
           <p className="mt-4 d-flex flex-column justify-content-center align-items-center paragraph">
             Leading the way in user research and design, we craft top-notch

@@ -10,7 +10,7 @@ const Hero = () => {
     <Container className="heroComp mt-5">
       <Row>
         <Col className="col-md-7 mx-auto mt-2">
-          <sapn className="greentag">UI/UX Solutions for Business</sapn>
+          <span className="greentag">UI/UX Solutions for Business</span>
           <h1 className="mt-4">Turn your Business vision into Surprising Experiences</h1>
         </Col>
       </Row>
