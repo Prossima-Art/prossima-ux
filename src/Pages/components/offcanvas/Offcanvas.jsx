@@ -26,7 +26,7 @@ export function OffCanvasExample({ ...props }) {
   const [Email, setEmail] = useState("");
   
   const getUsers = async () => {
-    const { data } = await axios.get(`https://ms-prossima-ai-be.onrender.com/contacts`);
+    const { data } = await axios.get(`https://prossima-be.vercel.app/contacts`);
     setUsers(data);
   };
 
@@ -36,7 +36,7 @@ export function OffCanvasExample({ ...props }) {
     }
     const data = { Name, Email };
 
-    const { data: newUser } = await axios.post(`https://ms-prossima-ai-be.onrender.com/contacts`, data);
+    const { data: newUser } = await axios.post(`https://prossima-be.vercel.app/contacts`, data);
 
     setUsers([...users, newUser]);
     setName("");
