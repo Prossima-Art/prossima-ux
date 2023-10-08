@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Logo } from "../../../logo";
 
-import { Button, Offcanvas, Form, Row } from "react-bootstrap";
+import { Button, Offcanvas, Form } from "react-bootstrap";
+import axios from "axios";
 
 export function ModalContato() {
   return (
@@ -14,18 +15,38 @@ export function ModalContato() {
 }
 
 export function OffCanvasExample({ ...props }) {
+  
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [inputName, setInputName] = useState("");
-  const [inputEmail, setInputEmail] = useState("");
+  const [users, setUsers] = useState([]);
+  const [Name, setName] = useState("");
+  const [Email, setEmail] = useState("");
+  
+  const getUsers = async () => {
+    const { data } = await axios.get(`https://prossima-be.vercel.app/contacts`);
+    setUsers(data);
+  };
 
-  function send2DB() {
-    console.log(inputName);
-    console.log(inputEmail);
-  }
+  const addNewUser = async () => {
+    if (!Name || !Email) {
+      return alert("Preencha os campos !");
+    }
+    const data = { Name, Email };
+
+    const { data: newUser } = await axios.post(`https://prossima-be.vercel.app/contacts`, data);
+
+    setUsers([...users, newUser]);
+    setName("");
+    setEmail("");
+  };
+
+
+  useEffect(() => {
+    getUsers();
+  }, []);
 
   return (
     <>
@@ -56,41 +77,48 @@ export function OffCanvasExample({ ...props }) {
             forward to hearing from you!
           </p>
 
-          <Form className="mb-5">
+          <Form className="mb-5" onSubmit={addNewUser}>
             <Form.Group
               className="row-md-2 mx-2"
-              controlId="form.ControlInputName"
+              
             >
-              <Form.Label column sm="4">
+              <Form.Label for="name" column sm="4">
                 Your name
               </Form.Label>
               <Form.Control
                 className="rounded-5 mb-3"
                 as="input"
                 placeholder="your name"
+                type="text"
+                id="name"
+                name="name"
+                required=""
                 rows={2}
-                value={inputName}
-                onChange={(e) => setInputName(e.target.value)}
+                value={Name}
+                onChange={(e) => setName(e.target.value)}
               />
             </Form.Group>
             <Form.Group
               className="row-md-3 mx-2 "
-              controlId="from.ControlInputEmail"
+             
             >
-              <Form.Label column sm="4">
+              <Form.Label column sm="4" for="email">
                 Email address
               </Form.Label>
               <Form.Control
-                className="rounded-5"
+                className="rounded-5  mb-4"
                 type="email"
                 placeholder="name@example.com"
-                value={inputEmail}
-                onChange={(e) => setInputEmail(e.target.value)}
+                id="email"
+                name="email"
+                required=""
+                value={Email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </Form.Group>
-          </Form>
           <Button
             className="rounded-5"
+            
             style={{
               justifyContent: "center",
               alignItems: "center",
@@ -98,13 +126,17 @@ export function OffCanvasExample({ ...props }) {
             }}
             variant="primary"
             type="submit"
-            onClick={send2DB}
+            // onClick={() => send2DB(Name, Email)}
           >
             Join The Waitlist!
           </Button>
+          </Form>
         </Offcanvas.Body>
-        <p  class="text-secondary text-center mb-5">
-          Prefer email? <a href="mailto:prossima.art@gmail.com" class="text-primary">prossima.art@gmail.com </a>
+        <p class="text-secondary text-center mb-5">
+          Prefer email?{" "}
+          <a href="mailto:prossima.art@gmail.com" class="text-primary">
+            prossima.art@gmail.com{" "}
+          </a>
         </p>
       </Offcanvas>
     </>
